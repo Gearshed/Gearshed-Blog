@@ -214,6 +214,27 @@ a:visited { color: #0c5a4b; }
   margin-bottom: 0;
   margin-left: 0; 
 }
+
+/*Modify Modal for phones*/
+@media screen and (max-width: 600px) {
+  #modal h1 {
+    padding-left: 0;
+    font-size: 150%;
+    width:100%;
+  }
+  .home .iconImage {
+    max-height: 40px;
+    max-width: 40px;
+  }
+  .home .icon {
+    width:60px;
+  }
+  .home .iconTitle {
+  font-size: 70%;
+  }
+
+}
+
 .posts { list-style-type: none; }
 
 .posts li { margin-bottom: 30px; }
