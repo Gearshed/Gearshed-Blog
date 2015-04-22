@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class='topper'><h1>Share the Outdoors</h1></div>
+      <div class="wrap">
+      {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+    {% include modal.html %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+      $('.mailing-list').click(function(){
+        $('.mail-submit').toggle();
+      });
+
+      $('#mc-embedded-subscribe').click(function(){
+        $('.mail-submit').hide();
+        $('#mailing-list').html('Thanks for subscribing!');
+      });
+    </script>
+    <script src="/js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyModal.js"></script>
+    <script type="text/javascript" src="/js/modalReader.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".topper h1").fitText(1, {minFontSize: '15px', maxFontSize: '80px' });
+        $("#modal").easyModal({
+          top:100,
+          autoOpen: !getCookie("gs_type")
+        });
+      $('.icon').click(function(){
+        var type = $(this).attr("href");
+        createCookie("gs_type", type);
+        $("#modal").trigger('closeModal');
+      })        
+      });</script>
+    </body>
+</html>
