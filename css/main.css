@@ -212,7 +212,8 @@ a:visited { color: #0c5a4b; }
 }
 #modal h1 {
   margin-bottom: 0;
-  margin-left: 0; 
+  margin-left: 0;
+  width: 100%;
 }
 
 /*Modify Modal for phones*/
