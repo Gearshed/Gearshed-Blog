@@ -40,12 +40,8 @@
       $('.icon').click(function(){
         var type = $(this).attr("href");
         createCookie("gs_type", type);
-        ga('set', {
-            page: location.pathname + location.search  + location.hash,
-            title: location.hash
-        });
-        ga('send', 'pageview');
         $("#modal").trigger('closeModal');
+        window.location.reload();
       })        
       });</script>
     </body>
